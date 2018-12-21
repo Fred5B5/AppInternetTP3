@@ -1,0 +1,437 @@
+2018-10-10 06:35:25 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1049): Cake\Database\Connection->getSchemaCollection()
+#8 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1003): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1018): Bake\Shell\Task\ModelTask->listAll()
+#10 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\BakeShell.php(252): Bake\Shell\Task\ModelTask->listUnskipped()
+#11 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all()
+#12 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-10-11 03:29:45 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sitereservationvol.articles' doesn't exist in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('Articles')
+#10 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('Articles')
+#11 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Articles')
+#12 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-10-11 03:30:33 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sitereservationvol.sitereservationvols' doesn't exist in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query(Object(Cake\Database\Query))
+#5 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(111): Cake\Database\Connection->execute(Object(Cake\Database\Query))
+#8 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(104): Migrations\Shell\Task\SeedTask->templateData()
+#9 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\migrations\src\Shell\Task\SeedTask.php(130): Bake\Shell\Task\SimpleBakeTask->bake('Sitereservation...')
+#10 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\SeedTask->bake('Sitereservation...')
+#11 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('sitereservation...')
+#12 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#14 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2018-11-05 21:48:14 Error: Fatal Error (1): Call to undefined method App\Shell\check15DaysShell::paginate() in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\check15daysShell.php, line 42]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-05 21:48:14 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Shell\check15DaysShell::paginate() in E:\AMPPS\Ampps\www\AppInternet\src\Shell\check15daysShell.php on line 42
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'E:\\AMPPS\\Ampps\\...', 42)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 12:54:03 Error: [RuntimeException] Unknown command `cake prin_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'prinPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 12:57:35 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 12:57:50 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 12:57:54 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 12:58:32 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 13:00:57 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 13:01:19 Error: [RuntimeException] Unknown command `cake print_pdf`. Run `cake --help` to get the list of valid commands. in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'printPdf')
+#1 E:\AMPPS\Ampps\www\AppInternet\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-11-13 13:01:39 Error: Fatal Error (4): syntax error, unexpected '}' in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 34]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:01:39 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}' in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 34
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 34)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 13:02:06 Warning: Warning (2): Missing argument 1 for App\Shell\printPdfShell::main(), called in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Console\Shell.php on line 532 and defined in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 31]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Shell\printPdfShell::main() - APP/Shell\printPdfShell.php, line 31
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 532
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-11-13 13:05:06 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:05:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO) in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 33
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 13:05:11 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:05:11 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO) in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 33
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 13:05:14 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:05:14 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO) in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 33
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 13:05:44 Error: Fatal Error (4): syntax error, unexpected '$PWD' (T_VARIABLE) in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:05:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$PWD' (T_VARIABLE) in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 33
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 13:06:47 Error: Fatal Error (4): syntax error, unexpected '$' in [E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-13 13:06:47 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$' in E:\AMPPS\Ampps\www\AppInternet\src\Shell\printPdfShell.php on line 33
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'E:\\AMPPS\\Ampps\\...', 33)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 14:26:47 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 14:26:47 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 14:29:35 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 14:29:35 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 14:33:55 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 14:33:55 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 14:51:39 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 14:51:39 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 20:02:02 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 20:02:02 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:34:35 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:34:35 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:35:08 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:35:08 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:35:09 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:35:09 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:35:09 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:35:09 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:35:09 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:35:09 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:35:10 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:35:10 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:37:28 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:37:28 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-13 23:38:15 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-13 23:38:15 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-14 00:46:28 Error: Fatal Error (1): Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 109
+[main] - [internal], line ??
+
+
+
+2018-11-14 00:46:28 Error: [Cake\Error\FatalErrorException] Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
+Stack Trace:
+#0 E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(109): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'PHPUnit\\...', 'E:\\AMPPS\\Ampps\\...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
