@@ -18,7 +18,7 @@
     <fieldset>
         <legend><?= __('Ajouter Image') ?></legend>
         <?php
-            echo $this->Form->control('ImageUsers', ['type' => 'file']);
+            echo $this->Form->control('imageuser', ['type' => 'file']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

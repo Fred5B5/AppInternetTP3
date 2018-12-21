@@ -53,23 +53,23 @@ class ImageusersController extends AppController
     public function add()
     {
         $imageuser = $this->Imageusers->newEntity();
-        if ($this->request->is('post')) {
-			if (!empty($this->request->getData('Imageusers.name'))) {
-			
-				$imagename = $this->request->getData('Imageusers.name');
-				$uploadPath = 'img/';
-				$uploadFile = $uploadPath.$imagename;
+		if ($this->request->is('post') or $this->request->is('ajax')) {
+			if (!empty($this->request->data['imageuser'])) {
 				
-				if (move_uploaded_file($this->request->getdata('Imageusers.tmp_name'), $uploadFile)) {
-					$imageuser = $this->Imageusers->patchEntity($imageuser, $this->request->getData());
+				$imagename = $this->request->data['imageuser'];
+				$uploadPath = 'img/';
+				$uploadFile = $uploadPath.$imagename['name'];
+				
+				if (move_uploaded_file($imagename['tmp_name'], $uploadFile)) {
+					$imageuser = $this->Imageusers->patchEntity($imageuser, $this->request->data());
 					
-					$imageuser->emplacementimage = $imagename;
+					$imageuser->emplacementimage = $imagename['name'];
 					$imageuser->path = $uploadPath;
 						
-					$this->log($this->request->getData());
+					$this->log($this->request->data());
 					$this->log($imageuser);
 
-					if ($this->imageusers->save($imageuser)) {
+					if ($this->Imageusers->save($imageuser)) {
                         $this->Flash->success(__('File has been uploaded and inserted successfully.'));
                         return $this->redirect(['action' => 'index']);
                     } else {
@@ -84,6 +84,45 @@ class ImageusersController extends AppController
 		}
         $this->set(compact('imageuser'));
     }
+	
+	public function drop()
+	{
+    if ($this->request->is(array('post', 'put'))) 
+    {
+        if(!empty($_FILES))
+        {
+            $fileName = $_FILES['file']['name']; //Get the image
+            $file_full = WWW_ROOT.'img/';     //Image storage path        
+            $file=basename($fileName);
+            $ext=pathinfo($file,PATHINFO_EXTENSION); 
+            $file_temp_name= $_FILES['file']['tmp_name'];
+            $new_file_name = time().'.'.$ext;
+            if(move_uploaded_file($file_temp_name, $file_full.$new_file_name))
+            {
+				$imageuser = $this->Imageusers->newEntity();
+				
+				$imageuser = $this->Imageusers->patchEntity($imageuser, $this->request->data());
+					
+				$imageuser->emplacementimage = $new_file_name;
+				$imageuser->path = $file_full.$new_file_name;
+						
+				$this->log($this->request->data());
+				$this->log($imageuser);
+
+				if ($this->Imageusers->save($imageuser)) {
+                    $this->Flash->success(__('File has been uploaded and inserted successfully.'));
+                } else {
+                    $this->Flash->error(__('Erreur de telechargement, veuillez reessayer'));
+                }
+                echo "File Uploaded successfully";die;
+            }
+            else
+            {
+                echo "Error";die;
+            }
+        }
+    }
+}
 
     /**
      * Edit method

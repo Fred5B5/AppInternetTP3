@@ -76,6 +76,9 @@ try {
     exit($e->getMessage() . "\n");
 }
 
+
+Plugin::load('ADmad/JwtAuth');
+
 /*
  * Load an environment local configuration file.
  * You can use a file like app_local.php to provide local overrides to your

@@ -1,3 +1,18 @@
+<?php
+
+
+$urlRedirectToIndex = $this->Url->build([
+    "controller" => "Imageusers",
+    "action" => "index"
+        ]);
+echo $this->Html->scriptBlock('var urlRedirectToIndex = "' . $urlRedirectToIndex . '";', ['block' => true]);
+echo $this->Html->css('dropzone/dropzone.min');
+echo $this->Html->script('dropzone/dropzone', ['block' => 'scriptLibraries']);
+echo $this->Html->script('dropzone/RedirectToIndex', ['block' => 'scriptBottom']);
+
+?>
+
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -9,6 +24,13 @@
 <h1>Uploaded Files</h1>
 <div class="large-9 medium-8 columns content">
     <!-- Table -->
+	
+	<div class="image_upload_div">
+    <?php  echo $this->Form->create('image',array('url'=>array('controller'=>'Imageusers','action'=>'drop'),'method'=>'post','id'=>'my-awesome-dropzone','class'=>'dropzone','type'=>'file','autocomplete'=>'off',));?>
+		
+    <?php    echo $this->Form->end();?>
+    </div>
+	
     <table class="table">
         <tr>
             <th width="5%">#</th>
