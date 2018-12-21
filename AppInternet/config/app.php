@@ -257,7 +257,7 @@ return [
             //'port' => 'non_standard_port_number',
             'username' => 'admin',
             'password' => 'admin',
-            'database' => ROOT . DS . 'sitereservationvol.sqlite',
+            'database' => ROOT . DS . 'sqlite/sitereservationvol.sqlite',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

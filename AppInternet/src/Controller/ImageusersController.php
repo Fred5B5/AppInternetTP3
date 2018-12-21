@@ -110,11 +110,11 @@ class ImageusersController extends AppController
 				$this->log($imageuser);
 
 				if ($this->Imageusers->save($imageuser)) {
-                    $this->Flash->success(__('File has been uploaded and inserted successfully.'));
+                    $this->Flash->success(__('Image has been uploaded and inserted successfully.'));
                 } else {
                     $this->Flash->error(__('Erreur de telechargement, veuillez reessayer'));
                 }
-                echo "File Uploaded successfully";die;
+                echo "Image Uploaded successfully";die;
             }
             else
             {
