@@ -4,6 +4,10 @@ Frédéric England
 </br>
 Automne 2018, Collège Montmorency.
 </br>
+<a href="https://github.com/Fred5B5/AppInternetTP3"> Mon github </a>
+</br>
+<h5>Tp3 en bas de la page.</h5>
+
 Une description sommaires des étapes d'utilisation typiques permettant de vérifier le bon fonctionnement de votre application web:</br>
 Vous devez indiquer clairement comment et avec quels éléments de vos pages interagir:</br>
 Creer un usager en cliquant sur le bouton s'inscrire en haut a droite, se connecter, le email de confirmation seras envoyer, par contre la page de confirmation ne fonctionne pas au complet.</br>
@@ -34,6 +38,7 @@ Je n'ai malheureusement plus le diagramme de l'an passer, voici quand meme celui
 </br>
 </br>
 </br>
+
 Du a cette erreur je ne peux export la page de coverage, c'est un probleme sensiblement sans solution sur internet...
 </br>
 PHP Fatal error:  Class 'PHPUnit\Framework\BaseTestListener' not found in E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php on line 28
@@ -63,4 +68,36 @@ Call Stack:
     0.1839   12784208   9. Composer\Autoload\includeFile() E:\AMPPS\Ampps\www\AppInternet\vendor\composer\ClassLoader.php:322
     0.1841   12793128  10. include('E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php') E:\AMPPS\Ampps\www\AppInternet\vendor\composer\ClassLoader.php:444
 
-Fatal Error: Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php, line 28]
+Fatal Error: Class 'PHPUnit\Framework\BaseTestListener' not found in [E:\AMPPS\Ampps\www\AppInternet\
+
+
+<H1>TP3</H1>
+</br>
+Veuillez prendre l'application au complet (Dossier AppInternet) pour vous assurez la meilleur des experience.
+</br>
+(Cela s'assureras que les appels interne de l'application, par exemples les lien dynamique au sein de l'application, fonctionne optimalement)
+</br>
+</br>
+<h4>Nouveautés !</h4>
+</br>
+Vous pouvez observer une liste lier dans l'ajout d'une reservation, celle-ci vous permet de choisir la destination et uniquement voir les vols y amenant.
+</br>
+</br>
+Vous pouvez maintenant drag and drop ou glisser vos images pour l'ajout d'une image utilisateur.
+</br>
+</br>
+Finalement, au grand désarois des robot, un captcha à été installer au login, les bloquant définitivement l'accès à notre site.
+</br>
+</br>
+Vous retrouverez la base de données sqlite dans un dossier du même nom à la racine du projet
+</br>
+</br>
+Du angular js a été utilisé pour les redirections de l'ajout d'image et les listes liées.
+</br>
+</br>
+Malheureusement, n'ayant pas travailler beaucoup avec angular js dans le tp2 j'ai fait de mon mieux pour complété le tp3, mais tombe a court de temps pour terminer crud et les jetons jwt.
+</br>
+Merci d'avance pour votre compréhension.
+</br>
+</br>
+<H1>Sur ce, je vous souhaite un merveilleux temps des fêtes !</H1>

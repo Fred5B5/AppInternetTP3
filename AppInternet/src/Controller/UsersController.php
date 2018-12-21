@@ -50,6 +50,7 @@ class UsersController extends AppController
 		$this->Auth->allow(['logout']);
 		$this->Auth->allow(['logout', 'add']);
 	}
+	
 	public function login()
 	{
 		if ($this->request->is('post')) {
@@ -63,7 +64,8 @@ class UsersController extends AppController
 					$_SERVER["REMOTE_ADDR"],
 					$_POST["g-recaptcha-response"]
 				);
-				if ($response != null) {
+				
+				if ($response) {
 					$user = $this->Auth->identify();
 					if ($user) {
 						$this->Auth->setUser($user);
@@ -76,6 +78,7 @@ class UsersController extends AppController
 			$this->Flash->error('Votre captcha est incorrecte.');
 		}
 	}
+	
 	public function logout()
 	{
 		$this->Flash->success('Vous avez été déconnecté.');
